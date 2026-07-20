@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 205" font-family="'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',sans-serif" role="img" aria-label="LangChain 노드를 감싸는 LangGraph 루프 흐름도">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M2 1 L8 5 L2 9" fill="none" stroke="#555" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="arL" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M2 1 L8 5 L2 9" fill="none" stroke="#C77F14" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <!-- LangChain node: 검색 -->
+  <rect x="30" y="45" width="150" height="58" rx="9" fill="#E9F0FE" stroke="#3B6FE0" stroke-width="1.4"/>
+  <text x="105" y="72" text-anchor="middle" font-size="16" fill="#173A78" font-weight="600">검색</text>
+  <text x="105" y="91" text-anchor="middle" font-size="11" fill="#3B6FE0">LangChain</text>
+
+  <!-- LangChain node: 생성 -->
+  <rect x="230" y="45" width="150" height="58" rx="9" fill="#E9F0FE" stroke="#3B6FE0" stroke-width="1.4"/>
+  <text x="305" y="72" text-anchor="middle" font-size="16" fill="#173A78" font-weight="600">생성</text>
+  <text x="305" y="91" text-anchor="middle" font-size="11" fill="#3B6FE0">LangChain</text>
+
+  <!-- LangGraph node: 검증 -->
+  <rect x="430" y="45" width="150" height="58" rx="9" fill="#FCEFD8" stroke="#E0930F" stroke-width="1.4"/>
+  <text x="505" y="72" text-anchor="middle" font-size="16" fill="#7A4E08" font-weight="600">검증</text>
+  <text x="505" y="91" text-anchor="middle" font-size="11" fill="#B9770F">LangGraph 분기</text>
+
+  <!-- 종료 -->
+  <rect x="632" y="52" width="66" height="44" rx="9" fill="#EEEEEE" stroke="#9A9A9A" stroke-width="1.4"/>
+  <text x="665" y="79" text-anchor="middle" font-size="14" fill="#444" font-weight="600">종료</text>
+
+  <!-- forward arrows -->
+  <line x1="180" y1="74" x2="226" y2="74" stroke="#555" stroke-width="1.6" marker-end="url(#ar)"/>
+  <line x1="380" y1="74" x2="426" y2="74" stroke="#555" stroke-width="1.6" marker-end="url(#ar)"/>
+  <line x1="580" y1="74" x2="628" y2="74" stroke="#555" stroke-width="1.6" marker-end="url(#ar)"/>
+  <text x="604" y="66" text-anchor="middle" font-size="11" fill="#666">성공</text>
+
+  <!-- loop back (LangGraph) -->
+  <path d="M505 103 L505 175 L105 175 L105 105" fill="none" stroke="#C77F14" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arL)"/>
+  <text x="305" y="169" text-anchor="middle" font-size="12" fill="#B9770F" font-weight="600">실패 시 재검색 (LangGraph 루프)</text>
+</svg>
