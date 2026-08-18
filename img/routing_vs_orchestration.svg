@@ -1,0 +1,63 @@
+<svg viewBox="0 0 860 420" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif">
+  <defs>
+    <marker id="a2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <!-- Left: Routing -->
+  <rect x="20" y="20" width="400" height="380" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="220" y="52" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">Routing (라우팅) — 1단계</text>
+  <text x="220" y="74" text-anchor="middle" font-size="12" fill="#64748b">가장 적합한 "한 명"에게 연결</text>
+
+  <rect x="160" y="95" width="120" height="46" rx="8" fill="#eef2ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="220" y="123" text-anchor="middle" font-size="13" font-weight="700" fill="#3730a3">Router</text>
+
+  <line x1="200" y1="141" x2="120" y2="200" stroke="#64748b" stroke-width="1.5" marker-end="url(#a2)"/>
+  <line x1="240" y1="141" x2="320" y2="200" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <line x1="220" y1="141" x2="220" y2="200" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="4 3"/>
+
+  <rect x="60" y="205" width="120" height="44" rx="8" fill="#dcfce7" stroke="#22c55e" stroke-width="2"/>
+  <text x="120" y="232" text-anchor="middle" font-size="12" font-weight="700" fill="#166534">Agent A ✓</text>
+
+  <rect x="160" y="205" width="120" height="44" rx="8" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.2"/>
+  <text x="220" y="232" text-anchor="middle" font-size="12" fill="#94a3b8">Agent B</text>
+
+  <rect x="260" y="205" width="120" height="44" rx="8" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.2"/>
+  <text x="320" y="232" text-anchor="middle" font-size="12" fill="#94a3b8">Agent C</text>
+
+  <text x="220" y="300" text-anchor="middle" font-size="12" fill="#475569">→ 선택된 A만 실행하고 결과 반환</text>
+  <text x="220" y="322" text-anchor="middle" font-size="12" fill="#475569">→ 부적합하면 B로 Handoff (순차 재시도)</text>
+  <text x="220" y="360" text-anchor="middle" font-size="11" fill="#64748b" font-style="italic">비유: 콜센터 상담원 배정</text>
+
+  <!-- Right: Orchestration -->
+  <rect x="440" y="20" width="400" height="380" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="640" y="52" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">Orchestration — 2단계</text>
+  <text x="640" y="74" text-anchor="middle" font-size="12" fill="#64748b">"여러 명"을 지휘·조합</text>
+
+  <rect x="580" y="95" width="120" height="46" rx="8" fill="#eef2ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="640" y="123" text-anchor="middle" font-size="13" font-weight="700" fill="#3730a3">Orchestrator</text>
+
+  <line x1="620" y1="141" x2="540" y2="200" stroke="#64748b" stroke-width="1.5" marker-end="url(#a2)"/>
+  <line x1="640" y1="141" x2="640" y2="200" stroke="#64748b" stroke-width="1.5" marker-end="url(#a2)"/>
+  <line x1="660" y1="141" x2="740" y2="200" stroke="#64748b" stroke-width="1.5" marker-end="url(#a2)"/>
+
+  <rect x="480" y="205" width="120" height="44" rx="8" fill="#dcfce7" stroke="#22c55e" stroke-width="2"/>
+  <text x="540" y="232" text-anchor="middle" font-size="12" font-weight="700" fill="#166534">Agent A ✓</text>
+
+  <rect x="580" y="205" width="120" height="44" rx="8" fill="#dcfce7" stroke="#22c55e" stroke-width="2"/>
+  <text x="640" y="232" text-anchor="middle" font-size="12" font-weight="700" fill="#166534">Agent B ✓</text>
+
+  <rect x="680" y="205" width="120" height="44" rx="8" fill="#dcfce7" stroke="#22c55e" stroke-width="2"/>
+  <text x="740" y="232" text-anchor="middle" font-size="12" font-weight="700" fill="#166534">Agent C ✓</text>
+
+  <!-- combine -->
+  <line x1="540" y1="249" x2="620" y2="290" stroke="#64748b" stroke-width="1.5" marker-end="url(#a2)"/>
+  <line x1="640" y1="249" x2="640" y2="290" stroke="#64748b" stroke-width="1.5" marker-end="url(#a2)"/>
+  <line x1="740" y1="249" x2="660" y2="290" stroke="#64748b" stroke-width="1.5" marker-end="url(#a2)"/>
+
+  <rect x="560" y="292" width="160" height="40" rx="8" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.8"/>
+  <text x="640" y="317" text-anchor="middle" font-size="12" font-weight="700" fill="#854d0e">결과 조합·통합</text>
+
+  <text x="640" y="360" text-anchor="middle" font-size="11" fill="#64748b" font-style="italic">비유: 오케스트라 지휘자</text>
+</svg>

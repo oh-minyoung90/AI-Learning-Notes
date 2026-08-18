@@ -1,0 +1,31 @@
+<svg viewBox="0 0 820 470" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif">
+  <text x="410" y="34" text-anchor="middle" font-size="20" font-weight="700" fill="#0f172a">Sandbox / Code Interpreter / Code Execution 계층</text>
+  <text x="410" y="56" text-anchor="middle" font-size="12" fill="#64748b">장소(공간) → 실행기(주체) → 실행(행위) 의 포함 관계</text>
+
+  <!-- Host layer -->
+  <rect x="40" y="80" width="740" height="360" rx="14" fill="#f1f5f9" stroke="#475569" stroke-width="2.5"/>
+  <text x="70" y="108" font-size="15" font-weight="700" fill="#334155">Host (실제 서버 / 운영체제)</text>
+  <text x="70" y="128" font-size="11" fill="#64748b">다른 프로세스·파일·네트워크가 함께 있는 진짜 시스템 — 절대 직접 노출하면 안 되는 영역</text>
+
+  <!-- Isolation boundary label -->
+  <text x="410" y="158" text-anchor="middle" font-size="11" fill="#b91c1c" font-weight="700">▼ 격리 경계 (Namespace · 자원 제한 · 통신 통제) ▼</text>
+
+  <!-- Sandbox layer -->
+  <rect x="90" y="170" width="640" height="250" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="2.5" stroke-dasharray="8 4"/>
+  <text x="120" y="198" font-size="15" font-weight="700" fill="#166534">Sandbox (격리된 실행 공간)</text>
+  <text x="120" y="217" font-size="11" fill="#15803d">벽으로 둘러싸인 안전 구역 — 안에서 사고가 나도 Host로 넘어가지 못함</text>
+
+  <!-- Worker / Interpreter layer -->
+  <rect x="140" y="235" width="540" height="165" rx="10" fill="#eef2ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="170" y="263" font-size="14" font-weight="700" fill="#3730a3">Code Interpreter (실행기 / Worker)</text>
+  <text x="170" y="282" font-size="11" fill="#4338ca">코드를 전달받아 실행하고 결과·로그를 돌려주는 주체</text>
+
+  <!-- Code Execution -->
+  <rect x="190" y="300" width="440" height="80" rx="8" fill="#fef9c3" stroke="#ca8a04" stroke-width="2"/>
+  <text x="410" y="328" text-anchor="middle" font-size="13" font-weight="700" fill="#854d0e">Code Execution (코드 실행 행위)</text>
+  <text x="410" y="350" text-anchor="middle" font-size="11" fill="#713f12">LLM이 생성한 코드가 실제로 돌아가는 순간</text>
+  <text x="410" y="368" text-anchor="middle" font-size="11" fill="#713f12">print(), 계산, 파일 처리 등 — 이 행위 자체가 위험을 품고 있어 격리가 필요</text>
+
+  <!-- side legend -->
+  <text x="410" y="432" text-anchor="middle" font-size="11" fill="#64748b" font-style="italic">"Code Interpreter가 Sandbox 안에서 Code Execution을 한다" — 한 문장에 셋이 다 들어간다</text>
+</svg>
